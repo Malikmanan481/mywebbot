@@ -59,6 +59,7 @@ function removeFile(FilePath) {
 }
 ;
 async function TAIRA_TECH_CODE(user, res) {
+  const { version, isLatest } = await fetchLatestBaileysVersion();
   const {
     state,
     saveCreds
