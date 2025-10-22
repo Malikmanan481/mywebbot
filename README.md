@@ -1,6 +1,7 @@
 ``` js
-👑 ICON BOT 👑
-Telegram - https://t.me/just_me_icon
-Follow GitHub
-https://github.com/Iconwave1
+👑 MALiK-X BOT 👑
+Telegram - https://t.me/malik481
+
+Whatsapp no - 923041278983
+
 ```
