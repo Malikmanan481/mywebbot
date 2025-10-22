@@ -8,7 +8,7 @@ const {
 const chalk = require("chalk");
 const path = require("path");
 const {
-  default: makeWASocket,
+  import: makeWASocket,
   jidDecode,
   DisconnectReason,
   PHONENUMBER_MCC,
