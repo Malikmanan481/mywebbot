@@ -8,18 +8,20 @@ const {
 const chalk = require("chalk");
 const path = require("path");
 const {
-  import makeWASocket, {
-  makeInMemoryStore,
-  useMultiFileAuthState,
-  fetchLatestBaileysVersion,
-  DisconnectReason,
+  default: makeWASocket,
   jidDecode,
-  jidNormalizedUser,
+  DisconnectReason,
+  PHONENUMBER_MCC,
+  makeCacheableSignalKeyStore,
+  useMultiFileAuthState,
+  Browsers,
+  getContentType,
   proto,
   downloadContentFromMessage,
-  getContentType,
-  Browsers
-} from 'baileys-pro'
+  fetchLatestBaileysVersion,
+  jidNormalizedUser,
+  makeInMemoryStore
+} = require("baileys-pro");
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
