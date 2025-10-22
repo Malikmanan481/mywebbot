@@ -459,7 +459,15 @@ await autoJoinGroup(rich, "https://chat.whatsapp.com/BBBDzHmxNHDBOjq6hznVv2?mode
     const richImageUrl = menuImages[Math.floor(Math.random() * menuImages.length)];
 
     const menuText = `
-
+⫷👑 𝗕𝗢𝗧 𝗜𝗡𝗙𝗢 👑⫸
+║ 🧑 ${m.pushName}
+║ 🤖 ${botname}
+║ 📡 Status: Online
+║ ⏱️ Runtime:${runtime(process.uptime())}
+║ 👑 Owner:${ownername}
+║ 💻 Version: 1.0.1
+║ 💨 Host: panel
+⫸━━━━━━━━━━━━━⫷
 
 ▓━ download menu ━▓
 │➤ ${prefix}play
