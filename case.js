@@ -2,7 +2,7 @@ require('./lib/config')
 const { 
   default: baileys, proto, jidNormalizedUser, generateWAMessage, 
   generateWAMessageFromContent, getContentType, prepareWAMessageMedia 
-} = require("@whiskeysockets/baileys");
+} = require("baileys-pro");
 
 const {
   downloadContentFromMessage, emitGroupParticipantsUpdate, emitGroupUpdate, 
@@ -21,7 +21,7 @@ const {
   GroupSettingChange, DisriyuectReason, WASocket, getStream, WAProto, 
   isBaileys, AnyMessageContent, fetchLatestBaileysVersion, 
   templateMessage, InteractiveMessage, Header 
-} = require("@whiskeysockets/baileys");
+} = require("baileys-pro");
 
 const fs = require('fs')
 const util = require('util')
