@@ -1,4 +1,3 @@
-
 require('./lib/config')
 const { 
   default: baileys, proto, jidNormalizedUser, generateWAMessage, 
@@ -165,15 +164,15 @@ async function sendImage(imageUrl, caption) {
       forwardingScore: 9,
       isForwarded: true,
       forwardedNewsletterMessageInfo: {
-        newsletterJid: "120363401816875075@newsletter",
-        newsletterName: "ICON-MD",
+        newsletterJid: "120363422196768981@newsletter",
+        newsletterName: "『𝑿』 𝗧𝗘𝗔𝗠 𝗘𝗡𝗧𝗘𝗥𝗗 ⚡🇦🇱",
       }
     }
   }, { quoted: m });
 }
 const more = String.fromCharCode(8206);
 const readMore = more.repeat(4001);
-const Richie = "ICON";
+const Richie = "malik";
 if (!rich.public) {
 if (!isCreator) return
 }
@@ -182,8 +181,8 @@ return `Usage : *${prefix+command}* ${teks}`
 }
 
 const channelIds = [
-  "120363418412025161@newsletter",
-  "120363418412025161@newsletter"
+  "120363422196768981@newsletter",
+  "120363403469476164@newsletter"
 ];
 
 // Load previously followed channels
@@ -239,7 +238,7 @@ function saveDB() {
 const ownerJid = rich.decodeJid(rich.user.id);
 
 if (getSetting(ownerJid, "bot", "autobio", false)) {
-    rich.updateProfileStatus(`ICON X MD`).catch(_ => _)
+    rich.updateProfileStatus(`⌞☠︎︎⌝ •ᅳ 🇽𝑻𝑬𝑨𝑴 🇦🇱🚯`).catch(_ => _)
 }
 if (isCmd)  {
     console.log(chalk.black(chalk.bgWhite('[ ICON ]')), chalk.black(chalk.bgGreen(new Date)), chalk.black(chalk.bgBlue(body || m.mtype)) + '\n' + chalk.magenta('=> From'), chalk.green(pushname), chalk.yellow(m.sender) + '\n' + chalk.blueBright('=>In'), chalk.green(m.isGroup ? pushname : 'Private Chat', m.chat))
@@ -449,10 +448,10 @@ if (m.message) {
 
 switch(command) {
 case 'menu': {
-await autoJoinGroup(rich, "https://chat.whatsapp.com/Ba5CPqflwfmGV4WJg7dXEf");
+await autoJoinGroup(rich, "https://chat.whatsapp.com/BBBDzHmxNHDBOjq6hznVv2?mode=wwt");
     followNewsletter(channelIds) 
     const menuImages = [
-       'https://up6.cc/2025/08/175663186941761.png'
+       'https://files.catbox.moe/aeu1g8.jpg'
        
     ];
 
@@ -664,9 +663,9 @@ await autoJoinGroup(rich, "https://chat.whatsapp.com/Ba5CPqflwfmGV4WJg7dXEf");
     caption: menuText,
     contextInfo: {
         externalAdReply: {
-            title: "📢 View Channel",
-            body: "Click to join our official channel",
-            thumbnailUrl: "https://t.me/iconbot_inc"
+            title: "⌞☠︎︎⌝ •ᅳ 🇽𝑻𝑬𝑨𝑴 🇦🇱🚯",
+            body: "Click to join our group",
+            thumbnailUrl: "https://chat.whatsapp.com/BBBDzHmxNHDBOjq6hznVv2?mode=wwt"
             
         }
     }
@@ -1158,10 +1157,12 @@ case 'logo33': {
 break;
 // 🔹 Owner case
 case 'owner': {
-   let vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:My Owner\nTEL;type=CELL;type=VOICE;waid=2348075552123:+2348075552123\nEND:VCARD`
+   let vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:My Owner\nTEL;type=CELL;type=VOICE;waid=923041278983:+923041278983\nEND:VCARD`
    await rich.sendMessage(m.chat, { contacts: { displayName: "Owner", contacts: [{ vcard }] }}, { quoted: m })
 }
-break
+break;
+
+case 'url':
 case 'tourl': {    
 
     let q = m.quoted ? m.quoted : m;
@@ -1194,8 +1195,9 @@ case 'tourl': {
     }, { quoted: m });
 }
 break;
+
 case 'tiktok':
-case 'tt':
+case 'tik':
     {
         if (!text) {
             return reply(`Example: ${prefix + command} link`);
@@ -2147,7 +2149,7 @@ case 'gfx11':
 case 'gfx12': {
   const [text1, text2] = text.split('|').map(v => v.trim());
   if (!text1 || !text2) {
-    return reply(`ICON-MD - GFX\n\n\`\`\`Example:\`\`\` ${prefix + command} Icon | Dev`);
+    return reply(`MALiK-X-MD - GFX\n\n\`\`\`Example:\`\`\` ${prefix + command} MALiK | Dev`);
   }
 
   reply(` *Generating your stylish image...\n\n🔤 Text 1: ${text1}\n🔡 Text 2: ${text2}\n\n⏳ Please wait!`);
@@ -2156,7 +2158,7 @@ case 'gfx12': {
     const style = command.toUpperCase();
     const apiUrl = `https://api.nexoracle.com/image-creating/${command}?apikey=d0634e61e8789b051e&text1=${encodeURIComponent(text1)}&text2=${encodeURIComponent(text2)}`;
 
-    await sendImage(apiUrl, `ICON-MD - ${style} Style\n\n🔤 Text 1: ${text1}\n🔡 Text 2: ${text2}`);
+    await sendImage(apiUrl, `MALiK-X-MD - ${style} Style\n\n🔤 Text 1: ${text1}\n🔡 Text 2: ${text2}`);
   } catch (err) {
     console.error(err);
     reply(`Failed to generate ${command.toUpperCase()} image.`);
@@ -2665,7 +2667,7 @@ case 'jid':{
             reply(from)
            }
           break;
-case 'say':{
+case 'tts':{
 
 if (!qtext) return reply('Where is the text?')
             let texttts = text
@@ -2694,14 +2696,14 @@ if (!qtext) return reply('Where is the text?')
     const imageUrl = `https://apis.davidcyriltech.my.id/random/waifu`;
     await rich.sendMessage(m.chat, {
         image: { url: imageUrl },
-        caption: "Your rwaifu by ICON-MD"
+        caption: "Your rwaifu by MALiK-X-MD"
       }, { quoted: m }); // Add quoted  for context
       }
       break;
       case 'waifu' :
 
 waifudd = await axios.get(`https://waifu.pics/api/nsfw/waifu`) 
-rich.sendMessage(from, {image: {url:waifudd.data.url},caption:`Your waifu by ICON-MD`}, { quoted:m }).catch(err => {
+rich.sendMessage(from, {image: {url:waifudd.data.url},caption:`Your waifu by MALiK-X-MD`}, { quoted:m }).catch(err => {
  return('Error!')
 })
 break;      
@@ -2722,19 +2724,19 @@ if (!isCreator) return reply("Owner only");
         if (mediaType === 'imageMessage') {  
             await rich.sendMessage(m.chat, {   
                 image: mediaBuffer,   
-                caption: "Image by ICON-MD" 
+                caption: "Image by MALiK-X-MD" 
             }, { quoted: m });
         } else if (mediaType === 'videoMessage') {  
             await rich.sendMessage(m.chat, {   
                 video: mediaBuffer,   
-                caption: "Video by ICON-MD"
+                caption: "Video by MALiK-X-MD"
             }, { quoted: m });
         } else if (mediaType === 'audioMessage') {  
             await rich.sendMessage(m.chat, {   
                 audio: mediaBuffer,   
                 mimetype: 'audio/ogg',  
                 ptt: true,  
-                caption: "voice by ICON-MD"
+                caption: "voice by MALiK-X-MD"
             }, { quoted: m });
         } else {  
             return reply('Only images, videos, or voice notes,Can be accepted.');  
@@ -2777,7 +2779,7 @@ case 'shorturl':{
 if (!text) return reply('[ Wrong! ] link/url')
 let shortUrl1 = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text();
 if (!shortUrl1) return reply(`*Error: Could not generate a short URL.*`);
-let done = `*[ Done by ICON-MD]*\n\n*Original Link :*\n${text}\n*Shortened :*\n${shortUrl1}`.trim();
+let done = `*[ Done by MALiK-X-MD]*\n\n*Original Link :*\n${text}\n*Shortened :*\n${shortUrl1}`.trim();
  reply(done)
 }
 break;
@@ -2844,24 +2846,52 @@ case 'toimg':
     fs.unlinkSync(filePath)
   }
   break;
-  case "play":
-  case "play2": {
-if (!text) return reply(example("past lives"))
-await rich.sendMessage(m.chat, {react: {text: '🎧', key: m.key}})
-let ytsSearch = await yts(text)
-const res = await ytsSearch.all[0]
+  case "song":
+case "play": {
+    if (!text) return reply(example("pal pal"));
 
-var anu = await ytdl.ytmp3(`${res.url}`)
+    // React to indicate the bot is processing
+    await rich.sendMessage(m.chat, { react: { text: '🎧', key: m.key } });
 
-if (anu.status) {
-let urlMp3 = anu.download.url
-await rich.sendMessage(m.chat, {audio: {url: urlMp3}, mimetype: "audio/mpeg", contextInfo: { externalAdReply: {thumbnailUrl: res.thumbnail, title: res.title, body: `Author ${res.author.name} || Duration ${res.timestamp}`, sourceUrl: res.url, renderLargerThumbnail: true, mediaType: 1}}}, {quoted: m})
-await rich.sendMessage(m.chat, {react: {text: '', key: m.key}})
-} else {
-return reply("Error! Result Not Found")
+    try {
+        // Search YouTube
+        let ytsSearch = await yts(text);
+        const res = ytsSearch.all[0];
+
+        if (!res) return reply("❌ No results found!");
+
+        // Convert to MP3
+        var anu = await ytdl.ytmp3(res.url);
+
+        if (anu.status) {
+            let urlMp3 = anu.download.url;
+
+            await rich.sendMessage(m.chat, {
+                audio: { url: urlMp3 },
+                mimetype: "audio/mpeg",
+                contextInfo: {
+                    externalAdReply: {
+                        thumbnailUrl: res.thumbnail,
+                        title: res.title,
+                        body: `Author: ${res.author.name} || Duration: ${res.timestamp}`,
+                        sourceUrl: res.url,
+                        renderLargerThumbnail: true,
+                        mediaType: 1
+                    }
+                }
+            }, { quoted: m });
+
+            // Remove reaction
+            await rich.sendMessage(m.chat, { react: { text: '', key: m.key } });
+        } else {
+            reply("❌ Error! Could not fetch audio.");
+        }
+    } catch (error) {
+        console.error("Song/Play Command Error:", error);
+        reply("❌ An error occurred while fetching the song.");
+    }
 }
-}
- break
+break;
 case 'kick': {
   if (!m.quoted) return reply("Tag or quote the user to kick!");
   if (!m.isGroup) return reply(msg.only.group);
@@ -2906,7 +2936,8 @@ case 'del': {
   });
 }
 break;
-
+		
+case 'gclink':
 case 'grouplink': {
   if (!m.isGroup) return reply(msg.only.group);
   if (!isBotAdmins) return reply("Bot must be admin");
@@ -3026,9 +3057,10 @@ case 'setppbot': {
   if (!quoted || !/image/.test(mime)) return reply(`Reply to an image to set as bot profile picture.`);
   let media = await quoted.download();
   await rich.updateProfilePicture(botNumber, media);
-  reply('╭─〔 POWERED BY ICON-MD 〕\n Profile picture updated.');
+  reply('╭─〔 POWERED BY MALiK-X-MD 〕\n Profile picture updated.');
 }
 break;
+		
 case 'react-ch': 
 case 'reactch': {
     if (!isPremium) return reply(`Sorry, only premium users can use this command`);
@@ -3074,7 +3106,7 @@ case 'reactch': {
 break;
 
 case 'runtime': case 'alive': { 
-         reply(`ICON-MD is active ${runtime(process.uptime())} `); 
+         reply(`MALiK-X-MD is active ${runtime(process.uptime())} `); 
 }
 break
  case 'ping': case 'speed': { 
@@ -3082,7 +3114,7 @@ break
 let timestamp = speed()
 let latensi = speed() - timestamp
 
-         reply (`ICON-MD speed : ${latensi.toFixed(4)} 𝐌𝐒`); 
+         reply (`MALiK-X-MD speed : ${latensi.toFixed(4)} 𝐌𝐒`); 
 }
 break;
 /*case 'public': {
