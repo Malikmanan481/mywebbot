@@ -147,11 +147,11 @@ const reply = async (text) => rich.sendMessage(m.chat, {
             contextInfo: {
                 mentionedJid: [sender],
                 externalAdReply: {
-                    title: "ICON LITTLE MD",
+                    title: "⌞☠︎︎⌝ •ᅳ 🇽𝑻𝑬𝑨𝑴 🇦🇱🚯",
                     body: pushname,
-                    mediaUrl: "https://t.me/just_me_icon",
+                    mediaUrl: "https://t.me/malik481",
                     sourceUrl: "",
-                    thumbnailUrl: "https://up6.cc/2025/08/175663186941761.png",
+                    thumbnailUrl: "https://files.catbox.moe/aeu1g8.jpg",
                     showAdAttribution: false
                 }
             }
@@ -172,7 +172,7 @@ async function sendImage(imageUrl, caption) {
 }
 const more = String.fromCharCode(8206);
 const readMore = more.repeat(4001);
-const Richie = "malik";
+const Richie = "MALiK-X-MD";
 if (!rich.public) {
 if (!isCreator) return
 }
