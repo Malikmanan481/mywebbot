@@ -9,7 +9,7 @@ import axios from 'axios'
 import { fileURLToPath } from 'url'
 
 // 🔹 Baileys imports (latest stable)
-
+const {
   import makeWASocket, {
   makeInMemoryStore,
   useMultiFileAuthState,
