@@ -1,14 +1,17 @@
 {
   "name": "Web-Bot-Md",
   "version": "1.0.0",
-  "description": "Web MD WhatsApp Bot (Baileys v6.7.7, Express, Heroku Ready)",
-  "main": "Main.js",
-  "type": "module",
+  "description": "Web MD bot",
+  "main": "index.js",
   "scripts": {
-    "start": "node Main.js"
+    "start": "node index.js"
   },
-  "engines": {
-    "node": "18.x"
+  "keywords": [
+    "whiskeysockets",
+    "multi-device"
+  ],
+  "author": "Icon",
+  "license": "MIT",
   },
   "dependencies": {
     "@whiskeysockets/baileys": "^6.7.7",
