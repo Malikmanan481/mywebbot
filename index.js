@@ -25,8 +25,9 @@ const IpFunc = await axios.get("https://api.ipify.org");
 const myIp = IpFunc.data.trim();
 autoLoad().then(() => {
   app.listen(PORT, () => {
-  console.log(`✅ Server running at http://localhost:${PORT}`);
-});
+    console.log(`
+ Server running on http://${myIp}:` + PORT);
+  });
 }).catch(err => {
   console.error("Failed to start the application:", err);
   process.exit(1);
