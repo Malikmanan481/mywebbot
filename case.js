@@ -21,7 +21,7 @@ const {
   GroupSettingChange, DisriyuectReason, WASocket, getStream, WAProto, 
   isBaileys, AnyMessageContent, fetchLatestBaileysVersion, 
   templateMessage, InteractiveMessage, Header 
-} = require("baileys-pro");
+} = require("@whiskeysockets/baileys");
 
 const fs = require('fs')
 const util = require('util')
