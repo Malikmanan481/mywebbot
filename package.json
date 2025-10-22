@@ -12,7 +12,6 @@
   ],
   "author": "Icon",
   "license": "MIT",
-  },
   "dependencies": {
     "@whiskeysockets/baileys": "^6.7.7",
     "@adiwajshing/keyed-db": "^0.2.5",
