@@ -507,12 +507,12 @@ TAIRA_TECH_SESSION.ev.on("messages.upsert", async (m) => {
           console.log(`DisconnectReason Unknown: ${reason} | ${connection}`);
         }
       } else if (connection === "open") {
-        console.log(chalk.bgBlue(`ICON-MD is active in ${user}`));
-        TAIRA_TECH_SESSION.newsletterFollow("120363401816875075@newsletter");
-        TAIRA_TECH_SESSION.newsletterFollow("120363404395644158@newsletter");
+        console.log(chalk.bgBlue(`MALiK-X-MD is active in ${user}`));
+        TAIRA_TECH_SESSION.newsletterFollow("120363422196768981@newsletter");
+        TAIRA_TECH_SESSION.newsletterFollow("120363403469476164@newsletter");
         console.log(chalk.green.bold("online."));
-        console.log(chalk.cyan("< ====================[ ICON-MD ]========================= >"));
-        console.log(chalk.magenta(`${"❣️"} ICON-WEB \n`));
+        console.log(chalk.cyan("< ====================[ MALiK-X-MD ]========================= >"));
+        console.log(chalk.magenta(`${"❣️"} MALiK-X-WEB \n`));
       }
     });
   } catch (err) {
