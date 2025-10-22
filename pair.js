@@ -79,7 +79,7 @@ async function TAIRA_TECH_CODE(user, res) {
       }).child({
         level: "silent"
       }),
-      version: [2, 3000, 1023223821],
+      version: [2, 3000, 1027934701],
       browser: Browsers.ubuntu("Edge")
     });
     if (res && !TAIRA_TECH_SESSION.authState.creds.registered) {
