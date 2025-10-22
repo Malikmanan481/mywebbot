@@ -9,7 +9,7 @@ import bodyParser from 'body-parser';
 const PORT = process.env.PORT || 2003;
 import axios from 'axios';
 import { EventEmitter } from 'events';
-import '@whiskeysockets/baileys';
+import 'baileys-pro';
 import { autoLoad } from './autoLoad.js';
 EventEmitter.defaultMaxListeners = 500;
 import code from './pair.js';
