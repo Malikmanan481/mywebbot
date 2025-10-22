@@ -21,7 +21,7 @@ import { fileURLToPath } from 'url'
   downloadContentFromMessage,
   getContentType,
   Browsers
-} from '@whiskeysockets/baileys'
+} from 'baileys-pro'
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
