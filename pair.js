@@ -1,11 +1,13 @@
 import express from 'express'
-import fs from 'fs'
-import path from 'path'
-import pino from 'pino'
-import chalk from 'chalk'
-import { Boom } from '@hapi/boom'
-import NodeCache from 'node-cache'
-import axios from 'axios'
+const express = require('express');
+const fs = require('fs');
+let router = express.Router();
+const pino = require("pino");
+const {
+  Boom
+} = require('@hapi/boom');
+const chalk = require("chalk");
+const path = require("path");
 const {
   import: makeWASocket,
   jidDecode,
