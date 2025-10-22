@@ -1,27 +1,27 @@
-const express = require('express');
-const fs = require('fs');
-let router = express.Router();
-const pino = require("pino");
-const {
-  Boom
-} = require('@hapi/boom');
-const chalk = require("chalk");
-const path = require("path");
-const {
-  default: makeWASocket,
-  jidDecode,
-  DisconnectReason,
-  PHONENUMBER_MCC,
-  makeCacheableSignalKeyStore,
+import express from 'express'
+import fs from 'fs'
+import path from 'path'
+import pino from 'pino'
+import chalk from 'chalk'
+import { Boom } from '@hapi/boom'
+import NodeCache from 'node-cache'
+import axios from 'axios'
+import { fileURLToPath } from 'url'
+
+// 🔹 Baileys imports (latest stable)
+
+  import makeWASocket, {
+  makeInMemoryStore,
   useMultiFileAuthState,
-  Browsers,
-  getContentType,
+  fetchLatestBaileysVersion,
+  DisconnectReason,
+  jidDecode,
+  jidNormalizedUser,
   proto,
   downloadContentFromMessage,
-  fetchLatestBaileysVersion,
-  jidNormalizedUser,
-  makeInMemoryStore
-} = require("baileys-pro");
+  getContentType,
+  Browsers
+} from '@whiskeysockets/baileys'
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
